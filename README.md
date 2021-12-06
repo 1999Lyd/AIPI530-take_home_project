@@ -13,7 +13,7 @@ run the project.py file to train the model and generate evaluation scores
    cd d3rlpy
    python project.py
 ```
-run the plot.py file to see the result
+run the plot.py file and input the path in step 1 to see the result
 ```
    python plot.py
 ```
