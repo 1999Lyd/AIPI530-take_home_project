@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 
 train_episodes, test_episodes = train_test_split(dataset, test_size=0.2)
 from d3rlpy.algos import CQL
-cql = CQL(use_gpu=False)
+cql = CQL(use_gpu=True)
 from d3rlpy.metrics.scorer import evaluate_on_environment
 from d3rlpy.metrics.scorer import td_error_scorer
 from d3rlpy.metrics.scorer import discounted_sum_of_advantage_scorer
@@ -41,7 +41,7 @@ fqe = FQE(algo=cql,
           n_epochs=200,
           q_func_factory='qr',
           learning_rate=1e-4,
-          use_gpu=False,
+          use_gpu=True,
           encoder_params={'hidden_units': [1024, 1024, 1024, 1024]})
 
 # metrics to evaluate with
