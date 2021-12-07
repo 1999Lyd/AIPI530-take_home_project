@@ -30,7 +30,7 @@ True Q is the ground truth label when we use neural network to fit Q values.
    def true_q(algo: AlgoProtocol, episodes: List[Episode]) -> float:
         for episode in episodes:
             for batch in _make_batches(episode, WINDOW_SIZE, algo.n_frames):
-                # estimate values for current observations
+                
 
 
                 # estimate values for next observations
@@ -39,7 +39,7 @@ True Q is the ground truth label when we use neural network to fit Q values.
                     [batch.next_observations[0]], next_actions
                 )
 
-                # calculate td errors
+                # calculate true q
                 mask = (1.0 - np.asarray(batch.terminals)).reshape(-1)
                 rewards = np.asarray(batch.next_rewards).reshape(-1)
                 if algo.reward_scaler:
