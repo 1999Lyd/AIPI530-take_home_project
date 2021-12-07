@@ -22,6 +22,10 @@ result sample
 ![44383e44ee53a8c90f8ae9013cdfd85](https://user-images.githubusercontent.com/87921304/144772461-3c43b796-64d5-4797-be71-55a48e8e82ea.png)
 
 ## True Q 
+True Q is the ground truth label when we use neural network to fit Q values.
+
+![6b3225baedb6ae7dd4e26f305505f64](https://user-images.githubusercontent.com/87921304/145109851-58c033b0-a287-4a94-bb80-447bccb3c70e.png)
+
 ```
    def true_q(algo: AlgoProtocol, episodes: List[Episode]) -> float:
         for episode in episodes:
